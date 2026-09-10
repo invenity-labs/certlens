@@ -27,7 +27,9 @@ footer{border-top:1px solid var(--border);color:var(--faint);font-size:12.5px}fo
 <header><div class="bar"><a class="brand" href="../"><img src="../icon.png" alt="">CertLens</a><nav><a href="../">Home</a><a href="../privacy/">Privacy</a><a href="../support/" aria-current="page">Support</a></nav></div></header>
 <main>
 <h1 id="certlens-support">CertLens support</h1>
-<p><em>For the CertLens browser extension (the consumer build). CertLens Fleet is supported through your organisation.</em></p>
+<p><em>For the CertLens browser extension (the consumer build). CertLens Fleet is supported through your organization.</em></p>
+<h2 id="the-inventory-stays-empty">The inventory stays empty</h2>
+<p>Chrome hands certificates to extensions only when its <strong>WebRequestSecurityInfo</strong> feature is on, and it ships off by default. Open <code>chrome://flags/#web-request-security-info</code> (paste it into the address bar), set <strong>Enable SecurityInfo in WebRequest API</strong> to <strong>Enabled</strong>, click <strong>Relaunch</strong>, then browse any HTTPS site. The dashboard's Capture tab reports whether certificates are arriving and shows the same steps until they do. Chrome 144 or later is required; older versions cannot expose certificates to extensions at all.</p>
 <h2 id="report-a-problem">Report a problem</h2>
 <p>Open an issue at <a href="https://github.com/invenity-labs/certlens/issues">github.com/invenity-labs/certlens/issues</a>. Issues are public; do not paste anything you would not want seen. If a report needs a private channel, say so in the issue and we will arrange one.</p>
 <h2 id="what-to-include">What to include</h2>

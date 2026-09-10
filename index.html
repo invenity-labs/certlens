@@ -35,10 +35,12 @@ footer{border-top:1px solid var(--border);color:var(--faint);font-size:12.5px}fo
 <p><img src="store/overview.png" alt="The Overview: what needs attention, and what this browser has been trusting" loading="lazy"></p>
 <h2 id="privacy-in-one-sentence">Privacy in one sentence</h2>
 <p>Nothing is sent anywhere unless you turn on a network feature, and each one says exactly what it sends and to whom. No account, no analytics, no telemetry. The full <a href="privacy/">privacy policy</a> is short and worth reading.</p>
-<h2 id="requirements">Requirements</h2>
-<p>Chrome 144 or later. Until Chrome enables it by default, the flag <strong>WebRequestSecurityInfo</strong> must be on: open <code>chrome://flags</code>, search for it, enable it, relaunch. CertLens explains this on first run and its Capture tab reports whether certificates are arriving.</p>
+<h2 id="setup-once">Setup, once</h2>
+<p>Chrome 144 or later. Chrome hands certificates to extensions only when its <strong>WebRequestSecurityInfo</strong> feature is on, and it ships off by default. Two clicks, once:</p>
+<ol><li>Open <code>chrome://flags/#web-request-security-info</code> (paste it into the address bar; links to <code>chrome://</code> pages do not open from a web page).</li><li>Set <strong>Enable SecurityInfo in WebRequest API</strong> to <strong>Enabled</strong>, then click <strong>Relaunch</strong>.</li></ol>
+<p>It persists across restarts. Until it is on, the inventory stays empty and CertLens says so: the dashboard opens on install with these steps, the popup repeats them, and the Capture tab reports the moment certificates arrive. On a managed browser there is no policy for this flag; launch Chrome with <code>--enable-features=WebRequestSecurityInfo</code> instead.</p>
 <h2 id="install">Install</h2>
-<p>CertLens is in review for the Chrome Web Store. The listing link will appear here when it is live.</p>
+<p><a href="https://chromewebstore.google.com/detail/certlens/hmljnbgpapbpkbehffogoiipkiiefbkh">CertLens on the Chrome Web Store</a>. The listing is unlisted for now: this link reaches it, store search does not. After Add to Chrome, the dashboard opens with the setup step above.</p>
 <h2 id="support">Support</h2>
 <p>Something wrong, or a certificate CertLens misread? See <a href="support/">support</a>.</p>
 </main>
